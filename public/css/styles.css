@@ -47,6 +47,8 @@ body {
   display:flex;
   padding-right: 6em;
   padding-top: 6em;
+  text-align: center;
+  padding-left: 1em;
 }
 .form-registration {
   max-width: 330px;
@@ -100,9 +102,6 @@ body {
   color: #333;
   font-size: 1.2rem;
   display: table;
-  content: "! Error : ";
-  color: #f00;
-  font-weight: bold;
 }
 
 .my-errors ul {
@@ -115,6 +114,7 @@ body {
   font-weight: bold;
   
 }
+
 
 .listing-table {
   width: 90%;
