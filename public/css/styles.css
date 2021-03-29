@@ -1,0 +1,226 @@
+/* Nesting */
+/* SCSS */
+nav {
+  font-size: 1em;
+  font-weight: bold;
+  float: left;
+  width:95%;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  float: left;
+  margin: 0 5px 0 0;
+  color: white;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.registernav{
+    float: right;
+  }
+
+  .registernav li {
+    padding-bottom: 25px;
+  }
+body {
+  padding: 40px 10px;
+  background-color: #eee;
+}
+
+.listing-reg h1 {
+  text-align: center;
+  margin: 0 0 2rem;
+}
+
+.register{
+  display:flex;
+  padding-right: 6em;
+  padding-top: 6em;
+}
+.form-registration {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.form-registration input {
+  width: 100%;
+  margin: 0px 0 10px;
+}
+
+.form-registration .btn {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+}
+
+.form-registration label {
+  display: inline-block;
+  margin-bottom: .5rem;
+}
+
+.form-registration .form-control {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  -webkit-transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+}
+
+.my-errors {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  color: #333;
+  font-size: 1.2rem;
+  display: table;
+  content: "! Error : ";
+  color: #f00;
+  font-weight: bold;
+}
+
+.my-errors ul {
+  margin: 0 0 1rem;
+}
+
+.my-errors ul:before {
+  content: "! Error : ";
+  color: #f00;
+  font-weight: bold;
+  
+}
+
+.listing-table {
+  width: 90%;
+}
+
+.listing-table th {
+  padding: 10px;
+  border-bottom: 1px solid #666;
+  background: #000;
+  color: #fff;
+}
+
+.listing-table th:first-child {
+  border-right: 1px solid #666;
+}
+
+.listing-table td {
+  padding: 10px;
+  border-bottom: 1px solid #666;
+  text-align: center;
+}
+
+.listing-table td:first-child {
+  border-right: 1px solid #666;
+}
+
+/* Variables */
+html {
+  font-size: 1em;
+  width: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, Sans-Serif;
+  background: #daaa0e;
+}
+
+header {
+  height: 50px;
+  width: 100%;
+  margin: 0.8em auto 1em auto;
+}
+
+header span a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  background: white;
+  width: 1350px;
+  min-height: 535px;
+  padding: 1.5%;
+  margin: 0 auto;
+}
+
+main #intro-image {
+  float: left;
+  width: 800px;
+  text-align: center;
+}
+
+main #intro-image img {
+  width: 800px;
+}
+
+main #intro-text {
+  width: 550px;
+  height: 407px;
+  float: left;
+  background: #d4d5d8;
+  text-align: center;
+  padding-top: 8em;
+}
+
+main #intro-text h3 {
+  font-size: 2em;
+  color: #313130;
+}
+
+main #intro-text span {
+  font-family: "Sacramento", cursive;
+  font-size: 2em;
+}
+
+.subscribe{
+  text-align: center;
+  padding-top: 6em;
+}
+
+footer {
+  width: 1350px;
+  margin: 2em auto;
+  padding-left: 80px;
+  font-size: 0.85em;
+}
+
+button, .submit-buttton {
+  color: white;
+  width: 100px;
+  height: 40px;
+  background: #daaa0e;
+  margin-top: 2em;
+}
+
+.submit-buttton {
+  border: 1px #313130;
+}
+/*# sourceMappingURL=styles.css.map */
