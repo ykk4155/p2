@@ -7,8 +7,8 @@ block content
         ul.my-errors
         for error in errors
             li= error.msg
+    h3.register Register to subscribe
     form(action="." method="POST" class="form-registration")
-        h3.register Register to subscribe
         label(for="name") Name:
         input(
             type="text"
@@ -27,6 +27,23 @@ block content
             value=data.email
         )
 
+        label(for="username") Username:
+        input(
+            type="text"
+            id="username"
+            name="username"
+            class="form-control"
+            value=data.username
+        )
+
+        label(for="password") Password:
+        input(
+            type="password"
+            id="password"
+            name="password"
+            class="form-control"
+            value=data.password
+        )
         input(
             type="submit" 
             value="Submit"

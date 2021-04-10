@@ -2,9 +2,8 @@
 /* SCSS */
 nav {
   font-size: 1em;
-  font-weight: bold;
+  font-font-weight: bold;
   float: left;
-  width:95%;
 }
 
 nav ul {
@@ -26,13 +25,6 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
-.registernav{
-    float: right;
-  }
-
-  .registernav li {
-    padding-bottom: 25px;
-  }
 body {
   padding: 40px 10px;
   background-color: #eee;
@@ -43,33 +35,6 @@ body {
   margin: 0 0 2rem;
 }
 
-.my-errors {
-  margin: 0 auto;
-  padding: 0;
-  list-style: none;
-  color: #333;
-  font-size: 1.2rem;
-  display: table;
-  
-}
-
-.my-errors ul {
-  margin: 0 0 1rem;
-}
-
-.my-errors ul:before {
-  content: "! Error : ";
-  color: #f00;
-  font-weight: bold;
-  
-}
-.register{
-  display:flex;
-  padding-right: 6em;
-  padding-top: 6em;
-  text-align: center;
-  padding-left: 1em;
-}
 .form-registration {
   max-width: 330px;
   padding: 15px;
@@ -115,11 +80,27 @@ body {
   transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
 }
 
+.my-errors {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  color: #333;
+  font-size: 1.2rem;
+  display: table;
+}
 
+.my-errors li {
+  margin: 0 0 1rem;
+}
 
+.my-errors li:before {
+  content: "! Error : ";
+  color: #f00;
+  font-weight: bold;
+}
 
 .listing-table {
-  width: 90%;
+  width: 100%;
 }
 
 .listing-table th {
@@ -176,7 +157,6 @@ main {
 main #intro-image {
   float: left;
   width: 800px;
-  text-align: center;
 }
 
 main #intro-image img {
@@ -200,11 +180,6 @@ main #intro-text h3 {
 main #intro-text span {
   font-family: "Sacramento", cursive;
   font-size: 2em;
-}
-
-.subscribe{
-  text-align: center;
-  padding-top: 6em;
 }
 
 footer {
