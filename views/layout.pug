@@ -4,6 +4,7 @@ html
     title= `${title}`
     link(rel='preconnect' href='https://fonts.gstatic.com')
     link(href='https://fonts.googleapis.com/css2?family=Sacramento&display=swap' rel='stylesheet')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
     link(rel='StyleSheet' href='css/styles.css' type='text/css')
     script(src='script.js')
 header
@@ -13,25 +14,30 @@ header
           a(href='/') Home
         li |
         li
-          a(href='#') Blog
+          a(href='#') About
       ul
         li.registernav
           a(href='form') Register
+        li 
+          a(href='login') Login
 if !admin
     main
         section#intro-text
-            span Simple Kitchen
+            span Welcome to easychess.com .. 
             h3
-                | Simple &amp; Comforting
                 br
-                |             Recipes All Year Round
-            p Pan-seared chicken, Grill shrimp, mac &amp; cheese&mdash;need we say more?
-
+                |    ... let me tell you more   ...      
+            p Hi, I am Sameer, a US national Chess Master &amp; looking to teach you this great game of strategy &amp; risk-taking &mdash;need I say more?
             if !!isHomePage
-                button.submit-buttton View Recipes
-
+                button.submit-buttton Latest news
         section#intro-image
             block content
+        section#hist
+            span Brief history on chess        
+            p The history of chess can be traced back nearly 1500 years, although the earliest origins are uncertain. The earliest predecessor of the game probably originated in India, by the 7th century AD. From India, the game spread to Persia.
+            span Birth of sport
+            p The first modern chess tournament was held in London in 1851 and won, surprisingly, by German Adolf Anderssen, who was relatively unknown at the time. Anderssen was hailed as the leading chess master, and his brilliant, energetic attacking style became typical for the time, although it was retrospectively regarded as strategically shallow.Sparkling games like Anderssen's Immortal game and Evergreen Game or Morphy's Opera game were regarded as the highest possible summit of the chess art.
+            span 
 else
     main.admin-container
         block content

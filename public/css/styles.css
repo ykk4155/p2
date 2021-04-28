@@ -152,8 +152,14 @@ html {
 body {
   font-family: Arial, Helvetica, Sans-Serif;
   background: #daaa0e;
+  padding-top: 1em;
 }
 
+span {
+  margin: 20px;
+  padding:10px;
+
+}
 header {
   height: 50px;
   width: 100%;
@@ -202,6 +208,12 @@ main #intro-text span {
   font-size: 2em;
 }
 
+#hist {
+  padding-top: 8em;
+  margin-bottom: 20px;
+  font-size: medium;
+  text-align: center;
+}
 .subscribe{
   text-align: center;
   padding-top: 6em;
@@ -225,4 +237,40 @@ button, .submit-buttton {
 .submit-buttton {
   border: 1px #313130;
 }
+.social-footer {
+  list-style-type: none;
+  height: fit-content;
+  padding: 1rem;
+  background: #8a8a8a;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.social-footer .social-footer-icons li:last-of-type {
+  margin-right: 0;
+  list-style-type: none;
+
+}
+
+.social-footer .social-footer-icons .fa {
+  font-size: 1.3rem;
+  color: #fefefe;
+  list-style-type: none;
+
+}
+
+.social-footer .social-footer-icons .fa:hover {
+  color: #4a4a4a;
+  transition: color 0.3s ease-in;
+  list-style-type: none;
+
+}
+
 /*# sourceMappingURL=styles.css.map */
