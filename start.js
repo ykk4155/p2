@@ -1,21 +1,29 @@
-require('dotenv').config();
+// require('dotenv').config();
 const mongoose = require('mongoose');
-//passport 
 
-mongoose.connect(process.env.DATABASE, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+// cookie session
 
-mongoose.connection
-  .on('open', () => {
-    console.log('Mongoose connection open');
-  })
-  .on('error', (err) => {
-    console.log(`Connection error: ${err.message}`);
-  });
 
-require('./models/Registration');
+
+
+
+
+
+
+// mongoose.connect(process.env.DATABASE, {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true
+// });
+
+// mongoose.connection
+//   .on('open', () => {
+//     console.log('Mongoose connection open');
+//   })
+//   .on('error', (err) => {
+//     console.log(`Connection error: ${err.message}`);
+//   });
+
+//require('./models/Registration');
 const app = require('./app');
 
 const server = app.listen(3000, () => {

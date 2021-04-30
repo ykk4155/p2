@@ -2,7 +2,7 @@ var express = require('express');
 var passport = require('passport');
 var Strategy = require('passport-local').Strategy;
 var db = require('./db');
-
+var cookieSession = require('cookie-session')
 // Configure the local strategy for use by Passport.
 //
 // The local strategy requires a `verify` function which receives the credentials
@@ -16,8 +16,6 @@ if (user.password != password) { return cb(null, false); }
 return cb(null, user);
 });
 }));
-
-
 
 // Configure Passport authenticated session persistence.
 // Serialize and deserialize users
@@ -59,7 +57,7 @@ var app = express();
 
 // Configure view engine to render EJS templates.
 app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
+app.set('view engine', 'pug');
 
 // Use application-level middleware for common functionality, including
 // logging, parsing, and session handling.
@@ -72,5 +70,21 @@ app.use(require('express-session')({ secret: 'keyboard cat', resave: false, save
 app.use(passport.initialize());
 app.use(passport.session());
 
+// COOKIE AND SESSION::
+ 
+app.set('trust proxy', 1) // trust first proxy
+ 
+app.use(cookieSession({
+  name: 'session',
+  keys: ['key1', 'key2']
+}))
+ 
+app.use(function (req, res, next) {
+  // Update views
+  req.session.views = (req.session.views || 0) + 1
+ 
+  // Write response
+  res.end(req.session.views + ' views')
+})
 // Define routes.
 app.listen(3000);

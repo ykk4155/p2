@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
@@ -5,15 +6,28 @@ const auth = require('http-auth');
 const { check, validationResult } = require('express-validator');
 const bcrypt = require('bcrypt');
 
+mongoose.connect(process.env.DATABASE, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+console.log(process.env.DATABASE);
+
+mongoose.connection
+  .on('open', () => {
+    console.log('Mongoose connection open');
+  })
+  .on('error', (err) => {
+    console.log(`Connection error: ${err.message}`);
+  });
 const router = express.Router();
-const Registration = mongoose.model('Registration');
+const Registration = require('../models/Registration')
 const basic = auth.basic({
   file: path.join(__dirname, '../users.htpasswd'),
 });
 
 router.get('/', (req, res) => {
   //res.send('It works!');
-  res.render('index', { title: ' landing page ' });
+  res.render('index', { title: ' welcome page ' });
 });
 
 router.get('/form', (req, res) => {

@@ -1,4 +1,5 @@
 const express = require("express");
+// var registrationSchema = require("./models/Registration")
 const mongoose = require("mongoose");
 const path = require("path");
 const routes = require("./routes/index");
@@ -8,7 +9,7 @@ const expressSession = require("express-session")({
   resave: false,
   saveUninitialized: false,
 });
-const requests = mongoose.model("services");
+// const requests = mongoose.model("registrations");
 const passport = require("passport");
 const app = express();
 
@@ -21,7 +22,7 @@ app.use("/", routes);
 app.use(express.static("public"));
 app.use(expressSession);
 app.use(passport.initialize());
-app.use(passport.session());
-module.exports = User = mongoose.model('user', UserSchema);
+app.use(passport.session());//
+// module.exports = User = mongoose.model('registrations', 'registrationSchema');
 
-// module.exports = app;
+module.exports = app;
